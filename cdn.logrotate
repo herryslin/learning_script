@@ -1,0 +1,56 @@
+/data/log/octopus/error.log {
+    nocompress
+    daily
+    copytruncate
+    rotate 7
+    missingok
+    noolddir
+    dateext
+}
+
+
+/data/log/nginx/error.log {
+    nocompress
+    hourly
+    copytruncate
+    create
+    rotate 30
+    missingok
+    olddir /data/log/nginx/backup
+    dateext
+}
+
+/data/log/nginx/dns_error.log {
+	 nocompress
+	 daily
+	 copytruncate
+	 create
+	 rotate 5
+	 missingok
+	 olddir /data/log/nginx/backup
+	 dateext
+
+}
+
+/data/log/octopus/upstream.log {
+	nocompress
+	daily
+	copytruncate
+	create
+	rotate 7
+	missingok
+	olddir /data/log/octopus
+	dateext
+}
+
+/opt/agent/log/agent.log.wf {
+    nocompress
+    daily
+    copytruncate
+    create
+    rotate 7
+    missingok
+    olddir /opt/agent/log
+    dateext
+}
+
